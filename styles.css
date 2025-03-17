@@ -1,0 +1,228 @@
+
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+
+/* Global Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url(image.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+}
+
+/* Container */
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding-bottom: 20px;
+}
+
+.links{
+    color: white;
+    font-size: 2;
+}
+
+
+/* off-screen-menu */
+.off-screen-menu {
+    color: aliceblue;
+    background-image: url(li.jpg);
+    height: 100vh;
+    width: 100%;
+    max-width: 450px;
+    position: fixed;
+    top: 0;
+    right: -450px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+    justify-content: center;
+    text-align: center;
+    font-size: 2rem;
+    transition: .3s ease;
+    list-style-type: none;
+}
+.off-screen-menu.active {
+    right: 0;
+}
+
+
+
+/* nav */
+nav {
+    padding: 1rem;
+    display: flex;
+    background:transparent;
+    position: top;
+}
+
+
+
+/* ham menu */
+.ham-menu {
+    height: 50px;
+    width: 40px;
+    margin-left: auto;
+    position: relative;
+}
+.ham-menu span {
+    height: 5px;
+    width: 100%;
+    background-color: #1c5f1a;
+    border-radius: 25px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: .3s ease;
+}
+.ham-menu span:nth-child(1) {
+    top: 25%;
+}
+.ham-menu span:nth-child(3) {
+    top: 75%;
+}
+.ham-menu.active span {
+    background-color: rgb(238, 229, 229);
+}
+.ham-menu.active span:nth-child(1) {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+.ham-menu.active span:nth-child(2) {
+    opacity: 0;
+}
+.ham-menu.active span:nth-child(3) {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+
+
+/* Main Content */
+main {
+    text-align: left;
+}
+
+/* Big Heading */
+h2 {
+    font-size: 3em;
+    font-weight: bold;
+    text-shadow: 3px 3px 8px rgba(0,0,0,0.5);
+    line-height: 1.2;
+    letter-spacing: 1px;
+}
+
+/* Subtext */
+p {
+    font-size: 1.2em;
+    font-weight: 300;
+    opacity: 0.9;
+    line-height: 1.5;
+    max-width: 500px;
+}
+
+/* Buttons */
+button {
+    border: none;
+    padding: 12px 24px;
+    font-size: 1.1em;
+    cursor: pointer;
+    text-transform: uppercase;
+    border-radius: 5px;
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+/* WATCH NOW button */
+.watch-btn {
+    background-color: #5ddd3d;
+    color: black;
+    font-weight: bold;
+    margin-top: 15px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    border-radius: 50px;
+    transition: .4s ease;
+
+}
+
+.watch-btn:hover,
+.learn-btn:hover {
+    background-color: #dfe9e0;
+}
+
+/* Story Thumbnails */
+.stories {
+    display: flex;
+    gap: 10px;
+    margin-top: 30px;
+}
+
+.stories img {
+    width: 180px;
+    height: auto;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.stories img:hover {
+    transform: scale(1.1);
+}
+
+/* Featured Story */
+.featured-story {
+    display: flex;
+    margin-top: 30px;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 15px;
+    border-radius: 10px;
+    align-items: center;
+}
+
+.featured-story img {
+    width: 150px;
+    border-radius: 5px;
+}
+
+.story-info {
+    margin-left: 15px;
+}
+
+/* Title inside Featured Story */
+.story-info h3 {
+    font-size: 1.5em;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+/* Description text inside Featured Story */
+.story-info p {
+    font-size: 1em;
+    line-height: 1.4;
+    opacity: 0.8;
+}
+
+/* LEARN MORE button */
+.learn-btn {
+    background-color: #5ddd3d;
+    color: black;
+    font-weight: bold;
+    margin-top: 10px;
+    border-radius: 50px;
+    transition: .4s ease;
+}
